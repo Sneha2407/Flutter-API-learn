@@ -47,6 +47,7 @@ class _ProvPage1State extends State<ProvPage1> {
               itemCount: postProvider.posts?.length,
               itemBuilder: (context, index) {
                 final post = postProvider.posts![index];
+                
                 // ind=index;
                 
                 return GestureDetector(

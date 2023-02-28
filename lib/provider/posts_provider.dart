@@ -7,6 +7,13 @@ class PostsProvider with ChangeNotifier {
   List<Post>? _posts = [];
   List<Post>? get posts => _posts;
 
+  // Post post1=Post();
+  // Future<void> fetchMyPosts() async {
+  //   var getResponse = await ApiModel.get('https://jsonplaceholder.typicode.com/posts');
+  //   post1=Post.fromJson(getResponse);
+  //   notifyListeners();
+  // }
+
     Future<void> getPosts() async{
    var posts= await ApiModel.get('https://jsonplaceholder.typicode.com/posts');
    if(posts.statusCode==200){
