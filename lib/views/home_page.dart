@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(posts![index].title??"",
+                          Text(posts![index].title,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                             style:TextStyle(fontSize: 24, fontWeight: FontWeight.bold)

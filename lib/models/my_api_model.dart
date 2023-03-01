@@ -5,5 +5,6 @@ class MyAPIModel{
 
   Future<Response> getPosts() async {
     return await _dio.get('$_baseUrl/posts');
+    //trying with my branch
   }
 }

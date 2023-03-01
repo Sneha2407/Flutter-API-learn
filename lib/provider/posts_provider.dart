@@ -7,12 +7,13 @@ class PostsProvider with ChangeNotifier {
   List<Post>? _posts = [];
   List<Post>? get posts => _posts;
 
-  // Post post1=Post();
-  // Future<void> fetchMyPosts() async {
-  //   var getResponse = await ApiModel.get('https://jsonplaceholder.typicode.com/posts');
-  //   post1=Post.fromJson(getResponse);
-  //   notifyListeners();
-  // }
+  late Post post1;
+  Future<void> fetchMyPosts() async {
+    var getResponse = await ApiModel.get('https://jsonplaceholder.typicode.com/posts');
+    // post1=Post.fromJson(getResponse);
+    _posts = (getResponse.data as List).map((post) => Post.fromJson(post)).toList();
+    notifyListeners();
+  }
 
     Future<void> getPosts() async{
    var posts= await ApiModel.get('https://jsonplaceholder.typicode.com/posts');
