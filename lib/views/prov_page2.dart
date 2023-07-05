@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_learn/views/prov_page3.dart';
 import 'package:provider/provider.dart';
 import '../models/posts.dart';
 import '../provider/posts_provider.dart';
@@ -23,6 +24,10 @@ class _ProvPage2State extends State<ProvPage2> {
                     subtitle: Text(postProvider.posts![postProvider.index].body??""),
                   )
       ),
+      bottomSheet: ElevatedButton(child: Container(height: 40,width: double.infinity, child: Center(child: Text("GO NEXT >>")),),onPressed: (){
+            
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ProvPage3()));
+          },),
     );
   }
 }

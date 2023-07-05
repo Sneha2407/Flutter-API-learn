@@ -23,7 +23,7 @@ class _ProvPage1State extends State<ProvPage1> {
 
   getData() async {
    final postsProvider = Provider.of<PostsProvider>(context, listen: false);
-    postsProvider.fetchMyPosts();
+    postsProvider.fetchPosts();
     setState(() {
       isLoaded = true;
     });
